@@ -2,6 +2,8 @@ FROM node:latest as build-stage
 
 ARG HOST=http://localhost:8080
 
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 WORKDIR /app
 COPY package*.json ./
 
